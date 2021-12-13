@@ -18,8 +18,8 @@ email: pestisafe@uw.edu
 author: The Pacific Northwest Agricultural Safety and Health Center (PNASH) at the University of Washington and the Washington Wine Industry Foundation (WWIF)
 description: >- # this means to ignore newlines until "baseurl:"
   A product of the Etiquetas bilingües de pesticidas™/Bilingual Pesticide Safety Project™
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/labelsnow_content" # the subpath of your site, e.g. /blog
+url: "https://deohs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pnashcenter
 github_username:  deohs
 
