@@ -1,0 +1,63 @@
+---
+---
+.page-content {
+	max-width: 1048px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pgroup {
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: lightblue;
+    padding: 5px;
+}
+
+.plabel {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.pcontent {
+    font-size: smaller;
+    font-weight: normal;
+}
+
+.ptable {
+    border: solid;
+    border-width: 1px;
+    border-color: lightblue;
+    margin: 1%;
+    padding: 10px;
+    width: 98%;
+}
+
+.pth {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: smaller;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightblue;
+}
+
+.ptd {
+    font-size: smaller;
+    font-weight: normal;
+    vertical-align: top;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Need to adjust font-size when printing as well */
+@media print {
+    html, body {
+        height: auto;
+        font-size: smaller;
+    }
+
+}

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/label.css" | relative_url }}">
+    {%- feed_meta -%}
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
+  </head>
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+
+<div class="pgroup">
+  <span class="plabel" style="font-size: larger">Product Name:</span>
+  <span class="pcontent" id="product-name" style="font-size: larger">{{ page.productName }}</span>
+  <br>
+  <span class="plabel">EPA Reg No:</span>
+  <span class="pcontent" id="epa-reg-no">{{ page.epaReg }}</span>
+  <br>
+  <span class="plabel">Producer:</span>
+  <span class="pcontent" id="producer-name">{{ page.producerName }}</span>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">PICOL</div>
+  <br>
+  <span class="plabel">Label Link: </span>
+  {% unless page.picolLabelLink == '--' %}
+  <span class="pcontent"><a id="picol-label-link" target="_blank" href="{{- page.picolLabelLink -}}">{{- page.picolLabelLink -}}</a>
+  </span>
+  {% endunless %}
+  <br>
+  <br>
+  <div class="plabel">Supplement Labels</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth">Supplement Label Links</th>
+      </tr>
+    </thead>
+    <tbody id="picol-supplement-rows">
+      {% for link in page.picolSupplements %}
+      {% unless link.suppLink == '--' %}
+      <tr>
+        <td class="ptd"><a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a></td>
+      </tr>
+      {% endunless %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Apps</div>
+  <br>
+  <span class="plabel">2016: </span>
+  <span id="app-2016" class="pcontent">{{ page.app2016 }}</span>
+  <br>
+  <span class="plabel">2018: </span>
+  <span id="app-2018" class="pcontent">{{ page.app2018 }}</span>
+  <br>
+  <span class="plabel">SHIP: </span>
+  <span id="app-SHIP" class="pcontent">{{ page.appship }}</span>
+  <br>
+  <span class="plabel">WSDA: </span>
+  <span id="app-WSDA" class="pcontent">{{ page.appwsda }}</span>
+  <br>
+  <br>
+  <div class="plabel">Crops</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody id="crop-rows">
+      {% for crop in page.crops %}
+      <tr>
+        <td class="ptd">{{ crop.ENG }}</td>
+        <td class="ptd">{{ crop.ESP }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <br>
+
+  <div class="plabel">Pests</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 30%">ENG</th>
+        <th class="pth" style="width: 30%">ESP</th>
+        <th class="pth" style="width: 30%">LAT/LIN</th>
+      </tr>
+    </thead>
+    <tbody id="pest-rows">
+      {% for pest in page.pests %}
+      <tr>
+        <td class="ptd">{{ pest.ENG }}</td>
+        <td class="ptd">{{ pest.ESP }}</td>
+        <td class="ptd" style="font-style: italic;">{{ pest.LIN }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="restricted-use">
+    <span class="plabel">Restricted Use Pesticide: </span>
+    <span class="pcontent" id="restricted-use-pesticide">{{ page.restricted }}</span>
+    <br>
+  </div>
+  <br>
+
+  <div class="plabel">Restricted Use Additional Statement:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="restricted-additional-ENG">{{ page.restrictedAdditional.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="restricted-additional-ESP">{{ page.restrictedAdditional.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="plabel">Classes</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody id="class-rows">
+      {% for class in page.classes %}
+      <tr>
+        <td class="ptd">{{ class.ENG }}</td>
+        <td class="ptd">{{ class.ESP }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Ingredients Table % Col Heading</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="ingredient-col-pct-heading-ENG">{{ page.ingrColPctHeading.ENG }}</td>
+        <td class="ptd" id="ingredient-col-pct-heading-ESP">{{ page.ingrColPctHeading.ESP }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="plabel">Active Ingredients</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 35%">ENG</th>
+        <th class="pth" style="width: 35%">ESP</th>
+        <th class="pth" style="width: 10%">%</th>
+      </tr>
+    </thead>
+    <tbody id="active-rows">
+      {% for ingredient in page.activeIngredients %}
+      <tr>
+        <td class="ptd">{{ ingredient.ENG }}</td>
+        <td class="ptd">{{ ingredient.ESP }}</td>
+        <td class="ptd">{{ ingredient.pct }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="plabel">Other Ingredients</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 35%">ENG</th>
+        <th class="pth" style="width: 35%">ESP</th>
+        <th class="pth" style="width: 10%">%</th>
+      </tr>
+    </thead>
+    <tbody id="inactive-rows">
+      {% for ingredient in page.inactiveIngredients %}
+      <tr>
+        <td class="ptd">{{ ingredient.ENG }}</td>
+        <td class="ptd">{{ ingredient.ESP }}</td>
+        <td class="ptd">{{ ingredient.pct }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="plabel">Active Weight per Unit Volume</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="active-weight-by-vol-ENG">{{ page.activeWeightByVol.ENG }}</td>
+        <td class="ptd" id="active-weight-by-vol-ESP">{{ page.activeWeightByVol.ESP }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="plabel">Petroleum Distillates</div>
+
+  <span class="plabel">Contains Petroleum Distillates: </span>
+  <span class="pcontent" id="contains-petroleum-distillates">{{ page.containsPetroleumDistillates }}</span>
+  <br>
+
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 35%">ENG</th>
+        <th class="pth" style="width: 35%">ESP</th>
+        <th class="pth" style="width: 10%">%</th>
+      </tr>
+    </thead>
+    <tbody id="petroleum-distillate-rows">
+      {% for item in page.petroleumDistillates %}
+      <tr>
+        <td class="ptd">{{ item.ENG }}</td>
+        <td class="ptd">{{ item.ESP }}</td>
+        <td class="ptd">{{ item.pct }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="omri">
+    <span class="plabel">OMRI: </span>
+    <span class="pcontent" id="omri">{{ page.omri }}</span>
+    <br>
+  </div>
+  <br>
+
+  <div class="plabel">Formulation</div>
+  <table class="ptable">
+    <thead>
+      <tr><th class="pth" style="width: 40%">ENG</th>
+      <th class="pth" style="width: 40%">ESP</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="formulation-ENG">{{ page.formulation.ENG }}</td>
+        <td class="ptd" id="formulation-ESP">{{ page.formulation.ESP }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <span class="plabel">Children Warning: </span>
+  <span id="children-warning" class="pcontent">{{ page.children }}</span>
+  <br><br>
+
+  <div class="plabel">Signal Word</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="signal-ENG">{{ page.signalWord.ENG }}</td>
+        <td class="ptd" id="signal-ESP">{{ page.signalWord.ESP }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <span class="plabel">Agricultural Use Requirements</span>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="ag-use-requirements-ENG">{{ page.agUseRequirements.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="ag-use-requirements-ESP">{{ page.agUseRequirements.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <span class="plabel">Directions for Use</span>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="directions-for-use-ENG">{{ page.directions.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="directions-for-use-ESP">{{ page.directions.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <div class="plabel">Net Measure</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody id="measure-rows">
+      {% for measure in page.measures %}
+      <tr>
+        <td class="ptd">{{ measure.ENG }}</td>
+        <td class="ptd">{{ measure.ESP }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <span class="plabel">Producer Name: </span>
+  <span class="pcontent" id="producer-name2">{{ page.producerName }}</span>
+  <br>
+  <span class="plabel">Producer EPA No: </span>
+  <span class="pcontent" id="producer-epa">{{ page.epaReg }}</span>
+  <br>
+  <span class="plabel">Producer Address: </span>
+  <span class="pcontent" id="producer-address">{{ page.producerAddress }}</span>
+  <br>
+  <span class="plabel">Producer Website: </span>
+  <span class="pcontent" id="producer-website"><a href="{{ page.producerWebsite }}">{{ page.producerWebsite }}</a></span>
+  <br>
+  <div class="plabel">Producer Phone: </div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="producer-phone-ENG">{{ page.producerPhone.ENG }}</td>
+        <td class="ptd" id="producer-phone-ESP">{{ page.producerPhone.ESP }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="plabel">Trademark Statement: </div>
+  <table class="ptable">
+    <thead>
+      <tr><th class="pth" style="width: 40%">ENG</th>
+      <th class="pth" style="width: 40%">ESP</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="trademark-ENG">{{ page.trademark.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="trademark-ESP">{{ page.trademark.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">First Aid</div>
+  <br>
+  <div class="plabel">If Swallowed:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-swallowed-ENG">{{ page.firstAidSwallow.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-swallowed-ESP">{{ page.firstAidSwallow.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="plabel">If In Eyes:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-eyes-ENG">{{ page.firstAidEyes.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-eyes-ESP">{{ page.firstAidEyes.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="plabel">If On Skin:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-skin-ENG">{{ page.firstAidSkin.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-skin-ESP">{{ page.firstAidSkin.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="plabel">If Inhaled:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-inhaled-ENG">{{ page.firstAidInhaled.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-inhaled-ESP">{{ page.firstAidInhaled.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="plabel">Note to Physician:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-physician-ENG">{{ page.firstAidPhysician.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-physician-ESP">{{ page.firstAidPhysician.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="plabel">Emergency Medical Instructions:</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-poison-control-ENG">{{ page.firstAidCallCenter.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-poison-control-ESP">{{ page.firstAidCallCenter.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="plabel">Emergency Phone:</div>
+  <table class="ptable">
+    <thead>
+      <tr><th class="pth" style="width: 40%">ENG</th>
+      <th class="pth" style="width: 40%">ESP</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="first-aid-emergency-phone-ENG">{{ page.emergPhone.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="first-aid-emergency-phone-ESP">{{ page.emergPhone.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Hazard Statement</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="hazard-statement-ENG">{{ page.hazardStatement.ENG | newline_to_br | markdowify }}</td>
+        <td class="ptd" id="hazard-statement-ESP">{{ page.hazardStatement.ESP | newline_to_br | markdowify }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Re-Entry Interval (REI)</div>
+  <table class="ptable">
+      <thead>
+        <tr>
+          <th class="pth" style="width: 40%">ENG</th>
+          <th class="pth" style="width: 40%">ESP</th>
+        </tr>
+      </thead>
+      <tbody id="rei-rows">
+        {% for rei in page.rei %}
+        <tr>
+          <td class="ptd">{{ rei.ENG }}</td>
+          <td class="ptd">{{ rei.ESP }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Pre-Harvest Interval (PHI)</div>
+  <table class="ptable">
+      <thead>
+        <tr>
+          <th class="pth" style="width: 40%">ENG</th>
+          <th class="pth" style="width: 40%">ESP</th>
+        </tr>
+      </thead>
+      <tbody id="phi-rows">
+        {% for phi in page.phi %}
+        <tr>
+          <td class="ptd">{{ phi.ENG }}</td>
+          <td class="ptd">{{ phi.ESP }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">User Safety Precautions</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="user-safety-recommendations-ENG">{{ page.safetyRecommendations.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="user-safety-recommendations-ESP">{{ page.safetyRecommendations.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Personal Protective Equipment and Pesticide Safety</div>
+  <br>
+  <div class="plabel">Personal Protective Equipment</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="ppe-equip-ENG">{{ page.ppeEquip.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="ppe-equip-ESP">{{ page.ppeEquip.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <div class="plabel">Agricultural Use Re-entry Workers (PPE)</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="ag-use-reentry-workers-ENG">{{ page.agUseReentryFull.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="ag-use-reentry-workers-ESP">{{ page.agUseReentryFull.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Engineering Controls</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="engineering-controls-ENG">{{ page.engControls.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="engineering-controls-ESP">{{ page.engControls.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Physical or Chemical Hazards</div>
+  <table class="ptable">
+    <thead>
+      <tr><th class="pth" style="width: 40%">ENG</th>
+      <th class="pth" style="width: 40%">ESP</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="physical-chemical-hazards-ENG">{{ page.physHazards.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="physical-chemical-hazards-ESP">{{ page.physHazards.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Storage and Disposal</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="storage-disposal-ENG">{{ page.storageDisposal.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="storage-disposal-ESP">{{ page.storageDisposal.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Environmental Hazards</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="environmental-hazards-ENG">{{ page.envHazards.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="environmental-hazards-ESP">{{ page.envHazards.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+      <tr>
+        <td class="ptd" id="chemigation-ENG"><br>CHEMIGATION<br>---</td>
+        <td class="ptd" id="chemigation-ESP"><br>QUIMIGACIÓN<br>---</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Spray Drift Prevention</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="spray-drift-prevention-ENG">{{ page.sprayDrift.ENG | newline_to_br | markdownify }}</td>
+        <td class="ptd" id="spray-drift-prevention-ESP">{{ page.sprayDrift.ESP | newline_to_br | markdownify }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <div class="plabel">Pollinators</div>
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th class="pth" style="width: 40%">ENG</th>
+        <th class="pth" style="width: 40%">ESP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ptd" id="pollinators-ENG">---</td>
+        <td class="ptd" id="pollinators-ESP">---</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+<br>
+
+<div class="pgroup">
+  <span class="plabel">Last modified: </span>
+  <span class="pcontent">{{ page.modified | date: "%Y-%m-%d %H:%M" }}</span>
+
+  <div class="pcontent">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Spanish translations in this work are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+</div>
+
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
