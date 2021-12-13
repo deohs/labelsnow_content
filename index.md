@@ -6,5 +6,5 @@ layout: page
 ---
 {% assign labels = site.label_pages | sort_natural: "title" %}
 {% for label in labels %}
-  <h3><a href="{{ label.url }}">{{ label.title }}</a></h3>
+  <h3><a href="{{ label.url | relative_url }}">{{ label.title }}</a></h3>
 {% endfor %}
