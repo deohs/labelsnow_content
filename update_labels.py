@@ -21,10 +21,7 @@ if not exists(data_file):
 with open(data_file) as f:
   data = json.load(f)
 
-# Extract labels from general data.
-labels = data['labels']
-
-if not labels:
+if not data:
   print('No labels found in data; check', data_file, 'and retry.')
   quit()
 
@@ -35,13 +32,14 @@ for f in old_files:
 
 # Iterate over label definitions; remove specific fields
 # and create yaml files with Jekyll front matter.
-for key in labels:
-  label = labels[key]
+for label in data:
 
   # Remove certain fields due to licensing constraints.
   del label['chemigation']
   del label['pollinators']
 
+  key = ''.join(e for e in label['productName'] if e.isalnum())
+  
   # Generate front matter.
   front_matter = 'title: "' + label['productName'] + '"\n'
   front_matter = front_matter + 'modified: ' + run_date + '\n'
