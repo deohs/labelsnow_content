@@ -1,0 +1,43 @@
+---
+---
+@import "minima";
+
+#app-logo {
+	margin: 0.5rem 0;
+    max-width: 450px;
+}
+
+@media screen and (max-width: 600px) {
+    #app-logo {
+        max-width: 80%;
+    }
+}
+
+.intro {
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+	width: 80%;
+	text-align: center;
+	color: #333;
+	margin: 0 auto;
+}
+
+.sponsor-logos {
+	text-align: center;
+	white-space: nowrap;
+	max-width: 550px;
+	margin: 0 auto;
+
+	img {
+		max-width: 25%;
+		margin: 0 0.5rem;
+	}
+}
+
+.cc-mark {
+	max-width: 1em;
+}
