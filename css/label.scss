@@ -5,60 +5,119 @@
 	max-width: 1048px;
     margin: 0 auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-.pgroup {
-    border: solid;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: lightblue;
-    padding: 5px;
-}
+    .selected-row {
+        background-color: lightblue;
+    }
 
-.plabel {
-    font-size: smaller;
-    font-weight: bold;
-}
+    #top-panel {
+        padding: 0 18px;
+    }
 
-.pcontent {
-    font-size: smaller;
-    font-weight: normal;
-}
+    .content-panel-header {
+        background-color: lightgrey;
+        cursor: pointer;
+        padding: 18px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 15px;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        margin: 0px;
+        margin-bottom: 2px;
+        text-align: center;
+    }
 
-.ptable {
-    border: solid;
-    border-width: 1px;
-    border-color: lightblue;
-    margin: 1%;
-    padding: 10px;
-    width: 98%;
-}
+    .content-panel {
+        padding: 0px;
+        margin: 0px;
+    }
 
-.pth {
-    font-weight: lighter;
-    font-style: italic;
-    font-size: smaller;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: left;
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: lightblue;
-}
+    tbody {
+        display: block;
+        overflow-y: scroll;
+    }
 
-.ptd {
-    font-size: smaller;
-    font-weight: normal;
-    vertical-align: top;
-    padding-left: 5px;
-    padding-right: 5px;
-}
+    tbody, tr {
+        display: table;
+        width: 100%;
+    }
 
-/* Need to adjust font-size when printing as well */
-@media print {
-    html, body {
-        height: auto;
-        font-size: smaller;
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border: none;
+        border-collapse: separate;
+        margin: 0;
+        td {
+            border: none;
+            vertical-align: top;
+        }
+    }
+
+    .missing {
+        background-color: lightpink;
+    }
+
+    .app-view-table {
+        width: 100%;
+    }
+
+    .app-view-cell {
+        width: 50%;
+        padding: 18px;
+        &:nth-of-type(2) {
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: black;
+        }
+    }
+
+    .app-view-label {
+        font-style: normal;
+        font-weight: bold;
+        padding-right: 5px;
+    }
+
+    .app-view-data {
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .app-view-data-para {
+        font-style: normal;
+        font-weight: normal;
+        padding-left: 0px;
+    }
+
+    .app-view-gray-box {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 10px;
+        border-style: solid;
+        border-width: 1px;
+        text-align: left;
+        background-color: #efefef
+    }
+
+    .app-view-box-heading {
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        font-size: small;
+    }
+
+    .ing-table {
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+    }
+
+    .header-table {
+        width: 100%;
     }
 
 }

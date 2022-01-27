@@ -21,757 +21,650 @@
 
     <main class="page-content" aria-label="Content">
 
-<div class="pgroup">
-  <span class="plabel" style="font-size: larger">Product Name:</span>
-  <span class="pcontent" id="product-name" style="font-size: larger">{{ page.productName }}</span>
-  <br>
-  <span class="plabel">EPA Reg No:</span>
-  <span class="pcontent" id="epa-reg-no">{{ page.epaReg }}</span>
-  <br>
-  <span class="plabel">Producer:</span>
-  <span class="pcontent" id="producer-name">{{ page.producerName }}</span>
-  <br>
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">PICOL</div>
-  <br>
-  <span class="plabel">Label Link: </span>
-  {% unless page.picolLabelLink == '--' %}
-  <span class="pcontent"><a id="picol-label-link" target="_blank" href="{{- page.picolLabelLink -}}">{{- page.picolLabelLink -}}</a>
-  </span>
-  {% endunless %}
-  <br>
-  <br>
-  <div class="plabel">Supplement Labels</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth">Supplement Label Links</th>
-      </tr>
-    </thead>
-    <tbody id="picol-supplement-rows">
-      {% for link in page.picolSupplements %}
-      {% unless link.suppLink == '--' %}
-      <tr>
-        <td class="ptd"><a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a></td>
-      </tr>
-      {% endunless %}
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Apps</div>
-  <br>
-  <span class="plabel">2016: </span>
-  <span id="app-2016" class="pcontent">{{ page.app2016 }}</span>
-  <br>
-  <span class="plabel">2018: </span>
-  <span id="app-2018" class="pcontent">{{ page.app2018 }}</span>
-  <br>
-  <span class="plabel">SHIP: </span>
-  <span id="app-SHIP" class="pcontent">{{ page.appship }}</span>
-  <br>
-  <span class="plabel">WSDA: </span>
-  <span id="app-WSDA" class="pcontent">{{ page.appwsda }}</span>
-  <br>
-  <br>
-  <div class="plabel">Crops</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody id="crop-rows">
-      {% for crop in page.crops %}
-      <tr>
-        <td class="ptd">{{ crop.ENG }}</td>
-        <td class="ptd">{{ crop.ESP }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <br>
-
-  <div class="plabel">Pests</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 30%">ENG</th>
-        <th class="pth" style="width: 30%">ESP</th>
-        <th class="pth" style="width: 30%">LAT/LIN</th>
-      </tr>
-    </thead>
-    <tbody id="pest-rows">
-      {% for pest in page.pests %}
-      <tr>
-        <td class="ptd">{{ pest.ENG }}</td>
-        <td class="ptd">{{ pest.ESP }}</td>
-        <td class="ptd" style="font-style: italic;">{{ pest.LIN }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="restricted-use">
-    <span class="plabel">Restricted Use Pesticide: </span>
-    <span class="pcontent" id="restricted-use-pesticide">{{ page.restricted }}</span>
-    <br>
-  </div>
-  <br>
-
-  <div class="plabel">Restricted Use Additional Statement:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div id="top-panel">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="restricted-additional-ENG">{{ page.restrictedAdditional.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="restricted-additional-ESP">{{ page.restrictedAdditional.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="plabel">Classes</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody id="class-rows">
-      {% for class in page.classes %}
-      <tr>
-        <td class="ptd">{{ class.ENG }}</td>
-        <td class="ptd">{{ class.ESP }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Ingredients Table % Col Heading</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="ingredient-col-pct-heading-ENG">{{ page.ingrColPctHeading.ENG }}</td>
-        <td class="ptd" id="ingredient-col-pct-heading-ESP">{{ page.ingrColPctHeading.ESP }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="plabel">Active Ingredients</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 35%">ENG</th>
-        <th class="pth" style="width: 35%">ESP</th>
-        <th class="pth" style="width: 10%">%</th>
-      </tr>
-    </thead>
-    <tbody id="active-rows">
-      {% for ingredient in page.activeIngredients %}
-      <tr>
-        <td class="ptd">{{ ingredient.ENG }}</td>
-        <td class="ptd">{{ ingredient.ESP }}</td>
-        <td class="ptd">{{ ingredient.pct }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <div class="plabel">Other Ingredients</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 35%">ENG</th>
-        <th class="pth" style="width: 35%">ESP</th>
-        <th class="pth" style="width: 10%">%</th>
-      </tr>
-    </thead>
-    <tbody id="inactive-rows">
-      {% for ingredient in page.inactiveIngredients %}
-      <tr>
-        <td class="ptd">{{ ingredient.ENG }}</td>
-        <td class="ptd">{{ ingredient.ESP }}</td>
-        <td class="ptd">{{ ingredient.pct }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <div class="plabel">Active Weight per Unit Volume</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="active-weight-by-vol-ENG">{{ page.activeWeightByVol.ENG }}</td>
-        <td class="ptd" id="active-weight-by-vol-ESP">{{ page.activeWeightByVol.ESP }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="plabel">Petroleum Distillates</div>
-
-  <span class="plabel">Contains Petroleum Distillates: </span>
-  <span class="pcontent" id="contains-petroleum-distillates">{{ page.containsPetroleumDistillates }}</span>
-  <br>
-
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 35%">ENG</th>
-        <th class="pth" style="width: 35%">ESP</th>
-        <th class="pth" style="width: 10%">%</th>
-      </tr>
-    </thead>
-    <tbody id="petroleum-distillate-rows">
-      {% for item in page.petroleumDistillates %}
-      <tr>
-        <td class="ptd">{{ item.ENG }}</td>
-        <td class="ptd">{{ item.ESP }}</td>
-        <td class="ptd">{{ item.pct }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <div class="omri">
-    <span class="plabel">OMRI: </span>
-    <span class="pcontent" id="omri">{{ page.omri }}</span>
-    <br>
-  </div>
-  <br>
-
-  <div class="plabel">Formulation</div>
-  <table class="ptable">
-    <thead>
-      <tr><th class="pth" style="width: 40%">ENG</th>
-      <th class="pth" style="width: 40%">ESP</th>
-    </tr></thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="formulation-ENG">{{ page.formulation.ENG }}</td>
-        <td class="ptd" id="formulation-ESP">{{ page.formulation.ESP }}</td>
+        <td class="app-view-cell">
+          <span class="app-view-label">Product</span> 
+          <span class="app-view-data">{{ page.productName }}</span>
+          <br>
+          <span class="app-view-label">Epa Reg. No.</span> 
+          <span class="app-view-data">{{ page.epaReg }}</span>
+          <br>
+        </td>
+        <td class="app-view-cell">
+          <span class="app-view-label">Producto</span> 
+          <span class="app-view-data">{{ page.productName }}</span>
+          <br>
+          <span class="app-view-label">Núm. EPA de registro</span> 
+          <span class="app-view-data">{{ page.epaReg }}</span>
+          <br>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
-<br>
-
-<div class="pgroup">
-  <span class="plabel">Children Warning: </span>
-  <span id="children-warning" class="pcontent">{{ page.children }}</span>
-  <br><br>
-
-  <div class="plabel">Signal Word</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Product Information / Información del producto</div>
+<div class="content-panel" id="collapsible-0">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="signal-ENG">{{ page.signalWord.ENG }}</td>
-        <td class="ptd" id="signal-ESP">{{ page.signalWord.ESP }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-label">Product: </span> 
+          <span class="app-view-data">{{ page.productName }}</span>
+          <br> 
+          <span class="app-view-label">Epa Reg. No.: </span> 
+          <span class="app-view-data">{{ page.epaReg }}</span>
+          <br>
+          <br> 
+          {% if page.omri == "yes" %}
+          <div class="app-view-gray-box"><div>OMRI™ Listed by the Organic Materials Review Institute (OMRI) for use in production of organic food and fiber.</div></div>
+          <br>
+          {% endif %}
+          <span class="app-view-label">Net Measure: </span> 
+          <span class="app-view-data">
+            {% for measure in page.measures %}
+              {% unless measure.ENG == '--' or measure.ENG == empty %}
+              {{ measure.ENG }};
+              {% endunless %}
+            {% endfor %}
+          </span>
+          <br>
+          <span class="app-view-label">Class: </span> 
+          <span class="app-view-data">{{ page.classes[0].ENG }}</span>
+          <br> 
+          <span class="app-view-label">Formulation: </span> 
+          <span class="app-view-data">{{ page.formulation.ENG }}</span>
+          <br>
+          <br>
+          {% if page.restricted == "yes" %}
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase; font-size: larger;">Restricted Use Pesticide</div>
+            <br>
+            <div class="app-view-box-heading" style="font-size: normal">{{ page.restrictedAdditional.ENG | newline_to_br | markdownify }}</div>
+          </div>
+          <br>
+          {% endif %}
+          <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ENG }}</div>
+          <br>
+          <div class="app-view-gray-box" style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: larger;">For Agricultural Use Only</div>
+          <br>
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase;">Agricultural Use Requirements</div>
+            <br>
+            <div class="app-view-data">{{ page.agUseRequirements.ENG | newline_to_br | markdownify }}</div>
+          </div>
+          <br>
+          <div class="app-view-label">Directions for Use: </div>
+          <div class="app-view-data">{{ page.directions.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <table class="ing-table" style="border-collapse: collapse;">
+            <tbody>
+              <tr style="background-color: #efefef; border: 1px solid black;">
+                <td style="padding-left: 5px; text-align: left; font-weight: bold; border-bottom: 1px solid black;">Active Ingredients</td>
+                <td style="text-align: right; padding-right: 5px; font-weight: bold; border-bottom: 1px solid black;">{{ page.ingrColPctHeading.ENG }}</td>
+              </tr>
+              {% for ingredient in page.activeIngredients %}
+              <tr>
+                <td style="padding-left: 5px;">{{ ingredient.ENG }}</td>
+                <td style="text-align: right; padding-right: 5px">{{ ingredient.pct }}%</td>
+              </tr>
+              {% endfor %}
+              <tr>
+                <td style="border-bottom: 1px solid black;"></td>
+                <td style="border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr style="background-color: #efefef;">
+                <td colspan="2" style="padding-left: 5px; text-align: left; font-weight: bold; border-bottom: 1px solid black;">Other Ingredients</td>
+              </tr>
+              {% for ingredient in page.inactiveIngredients %}
+              <tr>
+                <td style="padding-left: 5px;">{{ ingredient.ENG }}</td>
+                <td style="text-align: right; padding-right: 5px">{{ ingredient.pct }}%</td>
+              </tr>
+              {% endfor %}
+              <tr>
+                <td style="border-bottom: 1px solid black;"></td>
+                <td style="border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr>
+                <td style="padding-left: 5px; font-weight: bold">TOTAL</td>
+                <td style="text-align: right; padding-right: 5px;">100.00%</td>
+              </tr>
+            </tbody>
+          </table>
+          {% unless page.activeWeightByVol.ENG == empty %}
+          <br>
+          <span class="app-view-data">{{ page.activeWeightByVol.ENG }}</span>
+          {% endunless %}
+          {% if page.containsPetroleumDistillates == "yes" %}
+          <br>
+          <br>
+          <div class="app-view-data">Contains petroleum distillates</div>
+          <br>
+          <table class="ing-table" style="border-collapse: collapse;">
+            <thead style="background-color: #efefef; border: 1px solid black;">
+              <tr>
+                <th style="width: 75%; font-weight: bold; text-align: left; padding-left: 5px; border-bottom: 1px solid black;">Petroleum Distillates</th>
+                <th style="width: 20%; font-weight: bold; text-align: right; padding-right: 5px; border-bottom: 1px solid black;">%</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in page.petroleumDistillates %}
+              <tr>
+                <td style="text-align: left; padding-left: 5px;">{{ item.ENG }}</td>
+                <td style="text-align: right; padding-right: 5px">{{ item.pct }}%</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endif %}
+          <br>
+          <br>
+          {% if page.children == "yes" %}
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase; font-size: larger;">Keep out of Reach of Children</div>
+          </div>
+          <br>
+          {% endif %}
+          <div class="app-view-gray-box">Si usted no entiende la etiqueta, busque a alguien para que se la explique a usted in detalle.</div>
+          <br>
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-label">Producto: </span> 
+          <span class="app-view-data">{{ page.productName }}</span>
+          <br> 
+          <span class="app-view-label">Núm. EPA de registro: </span> 
+          <span class="app-view-data">{{ page.epaReg }}</span>
+          <br>
+          <br> 
+          {% if page.omri == "yes" %}
+          <div class="app-view-gray-box"><div>OMRI™ Incluido por el Instituto de Revisión de Materiales Orgánicos (OMRI) para su uso en producción de alimentos orgánicos y fibra.</div></div>
+          <br>
+          {% endif %}
+          <span class="app-view-label">Contenido neto: </span> 
+          <span class="app-view-data">
+            {% for measure in page.measures %}
+              {% unless measure.ESP == '--' or measure.ESP == empty %}
+              {{ measure.ESP }};
+              {% endunless %}
+            {% endfor %}
+          </span>
+          <br>
+          <span class="app-view-label">Clase: </span> 
+          <span class="app-view-data">{{ page.classes[0].ESP }}</span>
+          <br> 
+          <span class="app-view-label">Formulación: </span> 
+          <span class="app-view-data">{{ page.formulation.ESP }}</span>
+          <br>
+          <br>
+          {% if page.restricted == "yes" %}
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase; font-size: larger;">Restricted Use Pesticide</div>
+            <br>
+            <div class="app-view-box-heading" style="font-size: normal">{{ page.restrictedAdditional.ESP | newline_to_br | markdownify }}</div>
+          </div>
+          <br>
+          {% endif %}
+          <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ESP }}</div>
+          <br>
+          <div class="app-view-gray-box" style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: larger;">Solo para uso agrícola</div>
+          <br>
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase;">Requisitos de uso agrícola</div>
+            <br>
+            <div class="app-view-data">{{ page.agUseRequirements.ESP | newline_to_br | markdownify }}</div>
+          </div>
+          <br>
+          <div class="app-view-label">[Directions for Use]: </div>
+          <div class="app-view-data">{{ page.directions.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <table class="ing-table" style="border-collapse: collapse;">
+            <tbody>
+              <tr style="background-color: #efefef; border: 1px solid black;">
+                <td style="padding-left: 5px; text-align: left; font-weight: bold; border-bottom: 1px solid black;">Ingredientes activos</td>
+                <td style="text-align: right; padding-right: 5px; font-weight: bold; border-bottom: 1px solid black;">{{ page.ingrColPctHeading.ESP }}</td>
+              </tr>
+              {% for ingredient in page.activeIngredients %}
+              <tr>
+                <td style="padding-left: 5px;">{{ ingredient.ESP }}</td>
+                <td style="text-align: right; padding-right: 5px">{{ ingredient.pct }}%</td>
+              </tr>
+              {% endfor %}
+              <tr>
+                <td style="border-bottom: 1px solid black;"></td>
+                <td style="border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr style="background-color: #efefef;">
+                <td colspan="2" style="padding-left: 5px; text-align: left; font-weight: bold; border-bottom: 1px solid black;">Otros ingredientes</td>
+              </tr>
+              {% for ingredient in page.inactiveIngredients %}
+              <tr>
+                <td style="padding-left: 5px;">{{ ingredient.ESP }}</td>
+                <td style="text-align: right; padding-right: 5px">{{ ingredient.pct }}%</td>
+              </tr>
+              {% endfor %}
+              <tr>
+                <td style="border-bottom: 1px solid black;"></td>
+                <td style="border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr>
+                <td style="padding-left: 5px; font-weight: bold">TOTAL</td>
+                <td style="text-align: right; padding-right: 5px;">100.00%</td>
+              </tr>
+            </tbody>
+          </table>
+          {% unless page.activeWeightByVol.ESP == empty %}
+          <br>
+          <span class="app-view-data">{{ page.activeWeightByVol.ESP }}</span>
+          {% endunless %}
+          {% if page.containsPetroleumDistillates == "yes" %}
+          <br>
+          <br>
+          <div class="app-view-data">Contiene destilados del petróleo</div>
+          <br>
+          <table class="ing-table" style="border-collapse: collapse;">
+            <thead style="background-color: #efefef; border: 1px solid black;">
+              <tr>
+                <th style="width: 75%; font-weight: bold; text-align: left; padding-left: 5px; border-bottom: 1px solid black;">Destilados del petróleo</th>
+                <th style="width: 20%; font-weight: bold; text-align: right; padding-right: 5px; border-bottom: 1px solid black;">%</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in page.petroleumDistillates %}
+              <tr>
+                <td style="text-align: left; padding-left: 5px;">{{ item.ESP }}</td>
+                <td style="text-align: right; padding-right: 5px">{{ item.pct }}%</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endif %}
+          <br>
+          <br>
+          {% if page.children == "yes" %}
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase; font-size: larger;">Manténgase alejado de los niños</div>
+          </div>
+          {% endif %}
+          <br>
+          <div class="app-view-gray-box">If you do not understand this label, find someone to explain it to you in detail</div>
+          <br>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
-<br>
-
-<div class="pgroup">
-  <span class="plabel">Agricultural Use Requirements</span>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Producer Information / Información del fabricante</div>
+<div class="content-panel" id="collapsible-1">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="ag-use-requirements-ENG">{{ page.agUseRequirements.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="ag-use-requirements-ESP">{{ page.agUseRequirements.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-label">Producer: </span> 
+          <span class="app-view-data">{{ page.producerName }}</span>
+          <br> 
+          <span class="app-view-label">EPA Producer No.: </span> 
+          <span class="app-view-data">undefined</span>
+          <br> 
+          <span class="app-view-label">Producer Address: </span> 
+          <span class="app-view-data">{{ page.producerAddress }}</span>
+          <br> 
+          <span class="app-view-label">Producer Phone: </span> 
+          <span class="app-view-data">{{ page.producerPhone.ENG }}</span>
+          <br>
+          <div class="app-view-label">Trademarks: </div>
+          <div class="app-view-data">{{ page.trademark.ENG | newline_to_br | markdownify }}</div>
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-label">Fabricante: </span> 
+          <span class="app-view-data">{{ page.producerName }}</span>
+          <br> 
+          <span class="app-view-label">Núm. EPA del fabricante: </span> 
+          <span class="app-view-data">undefined</span>
+          <br> 
+          <span class="app-view-label">Dirección del fabricante: </span> 
+          <span class="app-view-data">{{ page.producerAddress }}</span>
+          <br> 
+          <span class="app-view-label">Núm. de teléfono del fabricante: </span> 
+          <span class="app-view-data">{{ page.producerPhone.ESP }}</span>
+          <br>
+          <div class="app-view-label">Marcas registradas: </div>
+          <div class="app-view-data">{{ page.trademark.ESP | newline_to_br | markdownify }}</div>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
-<br>
-
-<div class="pgroup">
-  <span class="plabel">Directions for Use</span>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">First Aid and Emergency Phone Numbers / Primeros auxilios y números de teléfono en caso de emergencia</div>
+<div class="content-panel" id="collapsible-2">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="directions-for-use-ENG">{{ page.directions.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="directions-for-use-ESP">{{ page.directions.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-
-  <div class="plabel">Net Measure</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody id="measure-rows">
-      {% for measure in page.measures %}
-      <tr>
-        <td class="ptd">{{ measure.ENG }}</td>
-        <td class="ptd">{{ measure.ESP }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="pgroup">
-  <span class="plabel">Producer Name: </span>
-  <span class="pcontent" id="producer-name2">{{ page.producerName }}</span>
-  <br>
-  <span class="plabel">Producer EPA No: </span>
-  <span class="pcontent" id="producer-epa">{{ page.epaReg }}</span>
-  <br>
-  <span class="plabel">Producer Address: </span>
-  <span class="pcontent" id="producer-address">{{ page.producerAddress }}</span>
-  <br>
-  <span class="plabel">Producer Website: </span>
-  <span class="pcontent" id="producer-website"><a href="{{ page.producerWebsite }}">{{ page.producerWebsite }}</a></span>
-  <br>
-  <div class="plabel">Producer Phone: </div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="producer-phone-ENG">{{ page.producerPhone.ENG }}</td>
-        <td class="ptd" id="producer-phone-ESP">{{ page.producerPhone.ESP }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="plabel">Trademark Statement: </div>
-  <table class="ptable">
-    <thead>
-      <tr><th class="pth" style="width: 40%">ENG</th>
-      <th class="pth" style="width: 40%">ESP</th>
-    </tr></thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="trademark-ENG">{{ page.trademark.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="trademark-ESP">{{ page.trademark.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">First Aid</div>
-  <br>
-  <div class="plabel">If Swallowed:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-swallowed-ENG">{{ page.firstAidSwallow.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-swallowed-ESP">{{ page.firstAidSwallow.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <div class="plabel">If In Eyes:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-eyes-ENG">{{ page.firstAidEyes.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-eyes-ESP">{{ page.firstAidEyes.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <div class="plabel">If On Skin:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-skin-ENG">{{ page.firstAidSkin.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-skin-ESP">{{ page.firstAidSkin.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <div class="plabel">If Inhaled:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-inhaled-ENG">{{ page.firstAidInhaled.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-inhaled-ESP">{{ page.firstAidInhaled.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <div class="plabel">Note to Physician:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-physician-ENG">{{ page.firstAidPhysician.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-physician-ESP">{{ page.firstAidPhysician.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <div class="plabel">Emergency Medical Instructions:</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-poison-control-ENG">{{ page.firstAidCallCenter.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-poison-control-ESP">{{ page.firstAidCallCenter.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <div class="plabel">Emergency Phone:</div>
-  <table class="ptable">
-    <thead>
-      <tr><th class="pth" style="width: 40%">ENG</th>
-      <th class="pth" style="width: 40%">ESP</th>
-    </tr></thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="first-aid-emergency-phone-ENG">{{ page.emergPhone.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="first-aid-emergency-phone-ESP">{{ page.emergPhone.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> <span class="app-view-label">If Swallowed: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidSwallow.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">If in Eyes: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidEyes.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">If on Skin or Clothing: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidSkin.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">If Inhaled: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidInhaled.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Note to Physician: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidPhysician.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">When Calling Poison Control Center: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidCallCenter.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Emergency Contact Phone Numbers: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.emergPhone.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+        </td>
+        <td class="app-view-cell"> <span class="app-view-label">Si se ingiere: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidSwallow.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Si entra en contacto con los ojos: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidEyes.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Si cae en la piel o ropa: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidSkin.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Si es inhalado: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidInhaled.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Nota para el médico: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidPhysician.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Primeros auxilios, información de tratamiento, médico o centro de envenenamiento: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.firstAidCallCenter.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+          <span class="app-view-label">Números telefónicos de emergencia: </span>
+          <br>
+          <div class="app-view-data-para">{{ page.emergPhone.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <br> 
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Hazard Statement</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Health and Safety Information / Información de salud y seguridad</div>
+<div class="content-panel" id="collapsible-3">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="hazard-statement-ENG">{{ page.hazardStatement.ENG | newline_to_br | markdowify }}</td>
-        <td class="ptd" id="hazard-statement-ESP">{{ page.hazardStatement.ESP | newline_to_br | markdowify }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-label">Restricted Entry Interval (REI): </span> 
+          <span class="app-view-data" style="margin-left: 2px">{{ page.rei[0].ENG }}</span>
+          <br>
+          <br> 
+          <span class="app-view-label">Preharvest Interval (PHI): </span> 
+          <span class="app-view-data" style="margin-left: 2px">{{ page.phi[0].ENG }}</span>
+          <br>
+          <br>
+          <div class="app-view-label" style="text-align: center; text-transform: uppercase; font-size: large">Precautionary Statements</div>
+          <br>
+          <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ENG }}</div>
+          <br>
+          <div class="app-view-gray-box">{{ page.hazardStatement.ENG | newline_to_br | markdowify }}</div>
+          <br>
+          <div class="app-view-label">User Safety Recommendations: </div>
+          <div class="app-view-data">{{ page.safetyRecommendations.ENG | newline_to_br | markdownify }}</div>
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-label">Intervalo de acceso restringido (REI): </span> 
+          <span class="app-view-data" style="margin-left: 2px">{{ page.rei[0].ESP }}</span>
+          <br>
+          <br> 
+          <span class="app-view-label">Intervalo precosecha (PHI): </span> 
+          <span class="app-view-data" style="margin-left: 2px">{{ page.phi[0].ESP }}</span>
+          <br>
+          <br>
+          <div class="app-view-label" style="text-align: center; text-transform: uppercase; font-size: large">Declaraciones Preventivas</div>
+          <br>
+          <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ESP }}</div>
+          <br>
+          <div class="app-view-gray-box">{{ page.hazardStatement.ESP | newline_to_br | markdowify }}</div>
+          <br>
+          <div class="app-view-label">Recomendaciones de seguridad para el usuario: </div>
+          <div class="app-view-data">{{ page.safetyRecommendations.ESP | newline_to_br | markdownify }}</div>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Re-Entry Interval (REI)</div>
-  <table class="ptable">
-      <thead>
-        <tr>
-          <th class="pth" style="width: 40%">ENG</th>
-          <th class="pth" style="width: 40%">ESP</th>
-        </tr>
-      </thead>
-      <tbody id="rei-rows">
-        {% for rei in page.rei %}
-        <tr>
-          <td class="ptd">{{ rei.ENG }}</td>
-          <td class="ptd">{{ rei.ESP }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Pre-Harvest Interval (PHI)</div>
-  <table class="ptable">
-      <thead>
-        <tr>
-          <th class="pth" style="width: 40%">ENG</th>
-          <th class="pth" style="width: 40%">ESP</th>
-        </tr>
-      </thead>
-      <tbody id="phi-rows">
-        {% for phi in page.phi %}
-        <tr>
-          <td class="ptd">{{ phi.ENG }}</td>
-          <td class="ptd">{{ phi.ESP }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">User Safety Precautions</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Personal Protective Equipment and Pesticide Safety / Equipo de protección personal (EPP) y seguridad con los pesticidas</div>
+<div class="content-panel" id="collapsible-4">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="user-safety-recommendations-ENG">{{ page.safetyRecommendations.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="user-safety-recommendations-ESP">{{ page.safetyRecommendations.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell">
+          <div class="app-view-label">Agricultural Use: Reentry Workers (PPE):</div>
+          <div class="app-view-data-para">{{ page.agUseReentryFull.ENG | newline_to_br | markdownify }}</div>
+          <br>
+          <div class="app-view-label">PPE for handlers (mixers, loaders, &amp; applicators):</div>
+          <div class="app-view-data-para">{{ page.ppeEquip.ENG | newline_to_br | markdownify }}</div>
+        </td>
+        <td class="app-view-cell">
+          <div class="app-view-label">Uso agrícola: trabajadores que entren durante el intervalo de acceso restringido (EPP):</div>
+          <div class="app-view-data-para">{{ page.agUseReentryFull.ESP | newline_to_br | markdownify }}</div>
+          <br>
+          <div class="app-view-label">EPP para manipuladores de pesticidas (mezcladores, cargadores y aplicadores):</div>
+          <div class="app-view-data-para">{{ page.ppeEquip.ESP | newline_to_br | markdownify }}</div>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Personal Protective Equipment and Pesticide Safety</div>
-  <br>
-  <div class="plabel">Personal Protective Equipment</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Engineering Controls / Medidas de control de ingeniería</div>
+<div class="content-panel" id="collapsible-5">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="ppe-equip-ENG">{{ page.ppeEquip.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="ppe-equip-ESP">{{ page.ppeEquip.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data-para">{{ page.engControls.ENG | newline_to_br | markdownify }}</span>
+          <br> 
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data">{{ page.engControls.ESP | newline_to_br | markdownify }}</span>
+          <br> 
+        </td>
       </tr>
     </tbody>
   </table>
-  <br>
-
-  <div class="plabel">Agricultural Use Re-entry Workers (PPE)</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="ptd" id="ag-use-reentry-workers-ENG">{{ page.agUseReentryFull.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="ag-use-reentry-workers-ESP">{{ page.agUseReentryFull.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Engineering Controls</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Physical or Chemical Hazards / Riesgos de orden físico o químico</div>
+<div class="content-panel" id="collapsible-6">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="engineering-controls-ENG">{{ page.engControls.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="engineering-controls-ESP">{{ page.engControls.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data-para">{{ page.physHazards.ENG | newline_to_br | markdownify }}</span>
+          <br> 
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data">{{ page.physHazards.ESP | newline_to_br | markdownify }}</span>
+          <br> 
+        </td>
       </tr>
     </tbody>
   </table>
-  <br>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Physical or Chemical Hazards</div>
-  <table class="ptable">
-    <thead>
-      <tr><th class="pth" style="width: 40%">ENG</th>
-      <th class="pth" style="width: 40%">ESP</th>
-    </tr></thead>
+<div class="content-panel-header">Storage and Disposal / Almacenamiento y desecho</div>
+<div class="content-panel" id="collapsible-7">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="physical-chemical-hazards-ENG">{{ page.physHazards.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="physical-chemical-hazards-ESP">{{ page.physHazards.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data-para">{{ page.storageDisposal.ENG | newline_to_br | markdownify }}
+          </span>
+          <br> 
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data">{{ page.storageDisposal.ESP | newline_to_br | markdownify }}</span>
+          <br> 
+        </td>
       </tr>
     </tbody>
   </table>
-  <br>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Storage and Disposal</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Environmental Hazards / Riesgos al medio ambiente</div>
+<div class="content-panel" id="collapsible-8">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="storage-disposal-ENG">{{ page.storageDisposal.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="storage-disposal-ESP">{{ page.storageDisposal.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data-para">{{ page.envHazards.ENG | newline_to_br | markdownify }}</span>
+          <br>
+          <br>
+          <div class="app-view-label">Chemigation</div>
+          <br>
+          <span class="app-view-data-para">--</span> 
+        </td>
+        <td class="app-view-cell"> 
+          <span class="app-view-data">{{ page.envHazards.ESP | newline_to_br | markdownify }}</span>
+          <br>
+          <br>
+          <div class="app-view-label">Quimigación</div>
+          <br>
+          <span class="app-view-data-para">--</span> 
+        </td>
       </tr>
     </tbody>
   </table>
-  <br>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Environmental Hazards</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Spray Drift Prevention / Prevención de deriva de la aspersión</div>
+<div class="content-panel" id="collapsible-9">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="environmental-hazards-ENG">{{ page.envHazards.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="environmental-hazards-ESP">{{ page.envHazards.ESP | newline_to_br | markdownify }}</td>
-      </tr>
-      <tr>
-        <td class="ptd" id="chemigation-ENG"><br>CHEMIGATION<br>---</td>
-        <td class="ptd" id="chemigation-ESP"><br>QUIMIGACIÓN<br>---</td>
+        <td class="app-view-cell">
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase;">Check the label</div>
+            <br>
+            More detailed spray drift management information may be included in the label.
+          </div>
+          <br>
+          <br>
+          <span class="app-view-data-para">{{ page.sprayDrift.ENG | newline_to_br | markdownify }}</span> 
+        </td>
+        <td class="app-view-cell">
+          <div class="app-view-gray-box">
+            <div class="app-view-box-heading" style="text-transform: uppercase;">Revise la etiqueta</div>
+            <br>
+            En la etiqueta puede estar incluída información con más detalle sobre el manejo de la deriva de la aspersión.
+          </div>
+          <br>
+          <br>
+          <span class="app-view-data">{{ page.sprayDrift.ESP | newline_to_br | markdownify }}</span>
+        </td>
       </tr>
     </tbody>
   </table>
-  <br>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Spray Drift Prevention</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Pesticide Labels / Etiquetas del pesticida</div>
+<div class="content-panel" id="collapsible-10">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="spray-drift-prevention-ENG">{{ page.sprayDrift.ENG | newline_to_br | markdownify }}</td>
-        <td class="ptd" id="spray-drift-prevention-ESP">{{ page.sprayDrift.ESP | newline_to_br | markdownify }}</td>
+        <td class="app-view-cell"> <span class="app-view-label">PICOL</span>
+          {% unless page.picolLabelLink == '--' %}
+          <br>
+          <br>
+          <span class="app-view-label">PDF Pesticide Label Link:
+            <br>
+          </span> 
+          <span class="app-view-data"><a target="_blank" href="{{- page.picolLabelLink -}}">{{- page.picolLabelLink -}}</a>
+          </span>
+          {% endunless %}
+          <br>
+          <br>
+          <span class="app-view-label">PDF Supplemental Pesticide Label Links:<br></span> 
+          <span class="app-view-data">
+            {% for link in page.picolSupplements %}
+            {% unless link.suppLink == '--' %}
+            <a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a></td>
+            {% endunless %}
+            {% endfor %}
+          </span>
+          <br>
+        </td>
+        <td class="app-view-cell"> <span class="app-view-label">PICOL</span>
+          {% unless page.picolLabelLink == '--' %}
+          <br>
+          <br>
+          <span class="app-view-label">Enlace en PDF de la etiqueta del pesticida:
+            <br>
+          </span> 
+          <span class="app-view-data"><a target="_blank" href="{{- page.picolLabelLink -}}">{{- page.picolLabelLink -}}</a>
+          </span>
+          {% endunless %}
+          <br>
+          <br>
+          <span class="app-view-label">Enlaces en PDF de etiquetas suplementarias  del pesticida:
+            <br>
+          </span> 
+          <span class="app-view-data">
+            {% for link in page.picolSupplements %}
+            {% unless link.suppLink == '--' %}
+            <a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a></td>
+            {% endunless %}
+            {% endfor %}
+          </span>
+          <br>
+        </td>
       </tr>
     </tbody>
   </table>
-  <br>
 </div>
-<br>
-
-<div class="pgroup">
-  <div class="plabel">Pollinators</div>
-  <table class="ptable">
-    <thead>
-      <tr>
-        <th class="pth" style="width: 40%">ENG</th>
-        <th class="pth" style="width: 40%">ESP</th>
-      </tr>
-    </thead>
+<div class="content-panel-header">Pollinators / Polinizadores</div>
+<div class="content-panel" id="collapsible-11">
+  <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="ptd" id="pollinators-ENG">---</td>
-        <td class="ptd" id="pollinators-ESP">---</td>
+        <td class="app-view-cell"> <span class="app-view-data-para">--</span> </td>
+        <td class="app-view-cell"> <span class="app-view-data">--</span> </td>
       </tr>
     </tbody>
   </table>
-  <br>
 </div>
-<br>
 
-<div class="pgroup">
-  <span class="plabel">Last modified: </span>
-  <span class="pcontent">{{ page.modified | date: "%Y-%m-%d %H:%M" }}</span>
 
-  <div class="pcontent">
+<div>
+  <span>Last modified: </span>
+  <span>{{ page.modified | date: "%Y-%m-%d %H:%M" }}</span>
+
+  <div>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Spanish translations in this work are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
   </div>
 </div>

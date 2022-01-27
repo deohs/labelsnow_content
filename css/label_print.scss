@@ -1,6 +1,11 @@
 ---
 ---
 
+html, body {
+    height: auto;
+    font-size: smaller;
+}
+
 .site-nav,
 .social-media-list {
 	display: none;
