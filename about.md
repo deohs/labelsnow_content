@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sobre / About
+title: Acera de / About
 permalink: /about/
 ---
 
@@ -12,8 +12,12 @@ permalink: /about/
 
 <p><hr /></p>
 
-<p>This is a content export of the free Pesticide Labels, Now!™ app. It is a product of the Bilingual Pesticide Safety Project™. The upcoming app, <a href="https://deohs.washington.edu/pnash/pestiseguro-pestisafe">PestiSafe™</a>, will be available as a premium product.</p>
+<p>Primary funding and support for this project was from the State of Washington Department of Labor and Industries Safety and Health Investment Project Grant Program (SHIP).</p>
 
-<p><a href="https://deohs.washington.edu/pnash/LabelsNow">For more information see our project site</a></p>
+<p>This site is a content export from the <a href="https://deohs.washington.edu/pnash/LabelsNow">¡Etiquetas de pesticidas, ahora!™/Pesticide Labels, Now!™</a> app available at no cost from the Apple App and Google Play Stores. This product was developed for SHIP by the <a href="https://deohs.washington.edu/pnash/bilingual-pesticide-safety-project">Bilingual Pesticide Safety Project™</a> a part of the <a href="https://deohs.washington.edu/pnash/">Pacific Northwest Agricultural Safety and Health Center (PNASH)</a> at the University of Washington.</p>
 
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Spanish translations in this work are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<p>For more information see our project site <a href="https://deohs.washington.edu/pnash/LabelsNow">Etiquetas bilingües de pesticidas™ / Bilingual Pesticide Safety™ Project</a></p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Spanish translations in this work are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> by the State of Washington 2020-2022.</p>
+
+<p>Selected translations were adapted from: <a href="https://www.epa.gov/sites/default/files/2019-10/documents/spanish-translation-guide-for-pesticide-labeling.10.10.19.pdf">Spanish Translation Guide for Pesticide Labeling</a>. US EPA. October 2019. (Accessed 24 January 2022)</p>

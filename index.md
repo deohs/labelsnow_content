@@ -12,9 +12,9 @@ layout: default
   </div>
 
   <div class="sponsor-logos">
-    <img src="{{ "/img/PNASH-logo-web-150ppi-sq.png" | relative_url }}" alt="PNASH" />
-    <img src="{{ "/img/W-Logo_Purple_Hex_sq.png" | relative_url }}" alt="UW" />
-    <img src="{{ "/img/SHIP Grant funded by L_I.svg" | relative_url }}" alt="SHIP Grant" />
+    <a href="https://deohs.washington.edu/pnash/" target="_blank"><img src="{{ "/img/PNASH-logo-web-150ppi-sq.png" | relative_url }}" alt="PNASH" /></a>
+    <a href="https://www.washington.edu/" target="_blank"><img src="{{ "/img/W-Logo_Purple_Hex_sq.png" | relative_url }}" alt="UW" /></a>
+    <a href="https://lni.wa.gov/safety-health/grants-committees-partnerships/safety-health-investment-projects-grant-program/" target="_blank"><img src="{{ "/img/SHIP Grant funded by L_I.svg" | relative_url }}" alt="SHIP Grant" /></a>
   </div>
 </div>
 
