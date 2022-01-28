@@ -86,16 +86,20 @@
           </div>
           <br>
           {% endif %}
+          {% unless page.signalWord.ENG == '--' or page.signalWord.ENG == empty %}
           <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ENG }}</div>
           <br>
+          {% endunless %}
           <div class="app-view-gray-box" style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: larger;">For Agricultural Use Only</div>
           <br>
+          {% unless page.agUseRequirements.ENG == '--' or page.agUseRequirements.ENG == empty %}
           <div class="app-view-gray-box">
             <div class="app-view-box-heading" style="text-transform: uppercase;">Agricultural Use Requirements</div>
             <br>
             <div class="app-view-data">{{ page.agUseRequirements.ENG | newline_to_br | markdownify }}</div>
           </div>
           <br>
+          {% endunless %}
           <div class="app-view-label">Directions for Use: </div>
           <div class="app-view-data">{{ page.directions.ENG | newline_to_br | markdownify }}</div>
           <br>
@@ -142,6 +146,7 @@
           <br>
           <br>
           <div class="app-view-data">Contains petroleum distillates</div>
+          {% unless page.petroleumDistillates == empty %}
           <br>
           <table class="ing-table" style="border-collapse: collapse;">
             <thead style="background-color: #efefef; border: 1px solid black;">
@@ -159,6 +164,7 @@
               {% endfor %}
             </tbody>
           </table>
+          {% endunless %}
           {% endif %}
           <br>
           <br>
@@ -207,16 +213,20 @@
           </div>
           <br>
           {% endif %}
+          {% unless page.signalWord.ESP == '--' or page.signalWord.ESP == empty %}
           <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ESP }}</div>
           <br>
+          {% endunless %}
           <div class="app-view-gray-box" style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: larger;">Solo para uso agrícola</div>
           <br>
+          {% unless page.agUseRequirements.ESP == '--' or page.agUseRequirements.ESP == empty %}
           <div class="app-view-gray-box">
             <div class="app-view-box-heading" style="text-transform: uppercase;">Requisitos de uso agrícola</div>
             <br>
             <div class="app-view-data">{{ page.agUseRequirements.ESP | newline_to_br | markdownify }}</div>
           </div>
           <br>
+          {% endunless %}
           <div class="app-view-label">[Directions for Use]: </div>
           <div class="app-view-data">{{ page.directions.ESP | newline_to_br | markdownify }}</div>
           <br>
@@ -263,6 +273,7 @@
           <br>
           <br>
           <div class="app-view-data">Contiene destilados del petróleo</div>
+          {% unless page.petroleumDistillates == empty %}
           <br>
           <table class="ing-table" style="border-collapse: collapse;">
             <thead style="background-color: #efefef; border: 1px solid black;">
@@ -280,6 +291,7 @@
               {% endfor %}
             </tbody>
           </table>
+          {% endunless %}
           {% endif %}
           <br>
           <br>
@@ -342,77 +354,107 @@
   <table class="app-view-table">
     <tbody>
       <tr>
-        <td class="app-view-cell"> <span class="app-view-label">If Swallowed: </span>
+        <td class="app-view-cell"> 
+          {% unless page.firstAidSwallow.ENG == '--' or page.firstAidSwallow.ENG == empty %}
+          <span class="app-view-label">If Swallowed: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidSwallow.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidSwallow.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidEyes.ENG == '--' or page.firstAidEyes.ENG == empty %}
           <span class="app-view-label">If in Eyes: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidEyes.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidEyes.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidSkin.ENG == '--' or page.firstAidSkin.ENG == empty %}
           <span class="app-view-label">If on Skin or Clothing: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidSkin.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidSkin.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidInhaled.ENG == '--' or page.firstAidInhaled.ENG == empty %}
           <span class="app-view-label">If Inhaled: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidInhaled.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidInhaled.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidPhysician.ENG == '--' or page.firstAidPhysician.ENG == empty %}
           <span class="app-view-label">Note to Physician: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidPhysician.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidPhysician.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidCallCenter.ENG == '--' or page.firstAidCallCenter.ENG == empty %}
           <span class="app-view-label">When Calling Poison Control Center: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidCallCenter.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidCallCenter.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.emergPhone.ENG == '--' or page.emergPhone.ENG == empty %}
           <span class="app-view-label">Emergency Contact Phone Numbers: </span>
           <br>
-          <div class="app-view-data-para">{{ page.emergPhone.ENG | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.emergPhone.ENG | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
         </td>
-        <td class="app-view-cell"> <span class="app-view-label">Si se ingiere: </span>
+        <td class="app-view-cell"> 
+          {% unless page.firstAidSwallow.ESP == '--' or page.firstAidSwallow.ESP == empty %}
+          <span class="app-view-label">Si se ingiere: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidSwallow.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidSwallow.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidEyes.ESP == '--' or page.firstAidEyes.ESP == empty %}
           <span class="app-view-label">Si entra en contacto con los ojos: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidEyes.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidEyes.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidSkin.ESP == '--' or page.firstAidSkin.ESP == empty %}
           <span class="app-view-label">Si cae en la piel o ropa: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidSkin.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidSkin.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidInhaled.ESP == '--' or page.firstAidInhaled.ESP == empty %}
           <span class="app-view-label">Si es inhalado: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidInhaled.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidInhaled.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidPhysician.ESP == '--' or page.firstAidPhysician.ESP == empty %}
           <span class="app-view-label">Nota para el médico: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidPhysician.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidPhysician.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.firstAidCallCenter.ESP == '--' or page.firstAidCallCenter.ESP == empty %}
           <span class="app-view-label">Primeros auxilios, información de tratamiento, médico o centro de envenenamiento: </span>
           <br>
-          <div class="app-view-data-para">{{ page.firstAidCallCenter.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.firstAidCallCenter.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
+          {% unless page.emergPhone.ESP == '--' or page.emergPhone.ESP == empty %}
           <span class="app-view-label">Números telefónicos de emergencia: </span>
           <br>
-          <div class="app-view-data-para">{{ page.emergPhone.ESP | newline_to_br | markdownify }}</div>
+          <div class="app-view-data-para">{{ page.emergPhone.ESP | strip | newline_to_br | markdownify }}</div>
           <br>
           <br> 
+          {% endunless %}
         </td>
       </tr>
     </tbody>
@@ -434,10 +476,14 @@
           <br>
           <div class="app-view-label" style="text-align: center; text-transform: uppercase; font-size: large">Precautionary Statements</div>
           <br>
+          {% unless page.signalWord.ENG == '--' or page.signalWord.ENG == empty %}
           <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ENG }}</div>
           <br>
+          {% endunless %}
+          {% unless page.hazardStatement.ENG == '--' or page.hazardStatement.ENG == empty %}
           <div class="app-view-gray-box">{{ page.hazardStatement.ENG | newline_to_br | markdowify }}</div>
           <br>
+          {% endunless %}
           <div class="app-view-label">User Safety Recommendations: </div>
           <div class="app-view-data">{{ page.safetyRecommendations.ENG | newline_to_br | markdownify }}</div>
         </td>
@@ -452,10 +498,14 @@
           <br>
           <div class="app-view-label" style="text-align: center; text-transform: uppercase; font-size: large">Declaraciones Preventivas</div>
           <br>
+          {% unless page.signalWord.ESP == '--' or page.signalWord.ESP == empty %}
           <div class="app-view-gray-box" style="font-size: large; font-weight: bold; text-align: center;">{{ page.signalWord.ESP }}</div>
           <br>
+          {% endunless %}
+          {% unless page.hazardStatement.ESP == '--' or page.hazardStatement.ESP == empty %}
           <div class="app-view-gray-box">{{ page.hazardStatement.ESP | newline_to_br | markdowify }}</div>
           <br>
+          {% endunless %}
           <div class="app-view-label">Recomendaciones de seguridad para el usuario: </div>
           <div class="app-view-data">{{ page.safetyRecommendations.ESP | newline_to_br | markdownify }}</div>
         </td>
@@ -613,7 +663,7 @@
           <span class="app-view-data">
             {% for link in page.picolSupplements %}
             {% unless link.suppLink == '--' %}
-            <a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a></td>
+            <a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a><br>
             {% endunless %}
             {% endfor %}
           </span>
@@ -637,7 +687,7 @@
           <span class="app-view-data">
             {% for link in page.picolSupplements %}
             {% unless link.suppLink == '--' %}
-            <a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a></td>
+            <a href="{{- link.suppLink -}}" target="_blank">{{- link.suppLink -}}</a><br>
             {% endunless %}
             {% endfor %}
           </span>
