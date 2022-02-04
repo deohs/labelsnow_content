@@ -15,6 +15,12 @@ html, body {
     border-top: none;
 }
 
+#app-logo {
+    margin: 0.5rem 0;
+    max-height: 75px;
+    max-width: auto;
+}
+
 a {
 	color: #111 !important;
 }

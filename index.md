@@ -7,8 +7,14 @@ layout: default
 
 <div class="intro">
   <div class="intro-text">
-    <p>Información de salud y seguridad de 40 etiquetas de pesticidas muy utilizados en huertas de manzano y peral de Washington. <br />Estas traducciones son solo para información. La etiqueta es la ley.</p>
-    <p>Health and Safety information from 40 top labels used in Washington State apple and pear orchards. <br />These translations are for information only. The label is the law.</p>
+    <p>Información de salud y seguridad de 40 etiquetas de pesticidas muy utilizados en huertas de manzano y peral de Washington.</p>
+    <h3>Estas traducciones son solo para información. La etiqueta es la ley.</h3>
+
+    <p><hr /></p>
+
+
+    <p>Health and Safety information from 40 top labels used in Washington State apple and pear orchards.</p>
+    <h3>These translations are for information only. The label is the law.</h3>
   </div>
 
   <div class="sponsor-logos">
