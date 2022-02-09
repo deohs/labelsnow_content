@@ -29,3 +29,7 @@ title: Etiquetas / Labels
 {% for label in labels %}
   <h3><a href="{{ label.url | relative_url }}">{{ label.title }}</a></h3>
 {% endfor %}
+
+<div>
+  Spanish translations/Traducciones al español <img src="{{ "/img/52px-Cc.logo.circle.png" | relative_url }}" alt="CC" class="cc-mark" /> BY-NC-SA 4.0 The State of Washington 2020 – 2022
+</div>
