@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Pitch® 35WP INSECT GROWTH REGULATOR"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Pyriproxyfen
   ESP: Piriproxifeno
@@ -251,7 +251,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/58420.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/58420
 picolSLNs:
 - slnLink: --
 picolSupplements:

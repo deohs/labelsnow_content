@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Omni Supreme Spray"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Mineral Oil
   ESP: Aceite mineral
@@ -255,7 +255,7 @@ phi:
 physHazards:
   ENG: Do not use, pour, spill or store near heat or open flame.
   ESP: 'No use, vierta, derrame o almacene cerca del calor o flama abierta. '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/9665.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/9665
 picolSLNs:
 - slnLink: --
 picolSupplements:

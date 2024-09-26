@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "DuPont™ Fontelis® FUNGICIDE"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Penthiopyrad
   ESP: Penthiopyrad
@@ -235,7 +235,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/57473.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/57473
 picolSLNs:
 - slnLink: --
 picolSupplements:

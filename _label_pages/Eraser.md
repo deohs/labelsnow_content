@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Eraser™"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Chlorpyrifos
   ESP: "Chlorpirif\xF3s"
@@ -357,7 +357,7 @@ phi:
 physHazards:
   ENG: Combustible. Do not use or store near heat or open flame.
   ESP: 'Combustible. No use o almacene cerca del calor o flama abierta. '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/60168.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/60168
 ppeEquip:
   ENG: "Materials that are chemical resistant to this product are barrier laminate\
     \ and Viton \u226514 mils.\n\nMixers and loaders using a mechanical transfer loading\

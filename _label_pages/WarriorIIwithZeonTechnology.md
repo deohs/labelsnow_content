@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Warrior II with Zeon Technology®"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Lambda-cyhalothrin
   ESP: Lambda-cyhalothrin
@@ -338,9 +338,9 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/51022.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/51022
 picolSLNs:
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/54093.pdf
+- slnLink: https://picol.cahnrs.wsu.edu/label/54093
 picolSupplements:
 - suppLink: --
 ppeEquip:

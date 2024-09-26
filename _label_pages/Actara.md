@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Actara®"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Thiamethoxam
   ESP: Thiamethoxam
@@ -412,9 +412,9 @@ physHazards:
   ESP: 'No use, vierta, derrame o almacene cerca del calor o flama abierta.
 
     '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/37313.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/37313
 picolSLNs:
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/59291.pdf
+- slnLink: https://picol.cahnrs.wsu.edu/label/59291
 ppeEquip:
   ENG: "Applicators and other handlers must wear:\n\u2022 Long-sleeved shirt and long\
     \ pants\n\u2022 Chemical-resistant gloves made of any waterproof material \u2013\

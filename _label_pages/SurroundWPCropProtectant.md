@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Surround® WP Crop Protectant"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Kaolin
   ESP: "Caol\xEDn"
@@ -229,7 +229,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/51332.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/51332
 picolSLNs:
 - slnLink: --
 picolSupplements:

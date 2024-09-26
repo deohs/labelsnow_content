@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Luna® SENSATION"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Fluopyram
   ESP: Fluopyram
@@ -290,7 +290,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/57385.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/57385
 picolSLNs:
 - slnLink: --
 picolSupplements:

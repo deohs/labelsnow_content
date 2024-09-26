@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "PHT 440 Supreme Spray Oil"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Mineral oil
   ESP: Aceite mineral
@@ -248,7 +248,7 @@ physHazards:
     violence if heated sufficiently.
   ESP: 'No suelde, caliente o perfore este envase o recipiente. Los residuos se pueden
     incendiar de manera explosiva si se calientan lo suficiente. '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/60182.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/60182
 picolSLNs:
 - slnLink: --
 picolSupplements:

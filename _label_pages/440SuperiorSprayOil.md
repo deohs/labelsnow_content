@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "440 Superior Spray Oil"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Mineral oil
   ESP: Aceite mineral
@@ -251,7 +251,7 @@ physHazards:
 
     '
   ESP: "No use, vierta o almacene cerca del calor o flama abierta. \n\n"
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/59873.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/59873
 picolSLNs:
 - slnLink: --
 picolSupplements:

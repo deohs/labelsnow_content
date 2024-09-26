@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "DiPel® DF Biological Insecticide Dry Flowable"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Bacillus thuringiensis, subsp. kurstaki, strain ABTS-351, fermentation solids,
     spores, and insecticidal toxins
@@ -379,7 +379,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/37049.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/37049
 picolSLNs:
 - slnLink: --
 picolSupplements:

@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "DuPont™ Altacor® INSECT CONTROL WITH THE ACTIVE INGREDIENT RYNAXYPYR®"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Chlorantraniliprole
   ESP: Clorantraniliprol
@@ -313,7 +313,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/51198.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/51198
 picolSLNs:
 - slnLink: --
 picolSupplements:

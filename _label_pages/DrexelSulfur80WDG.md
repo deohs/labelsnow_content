@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Drexel® Sulfur 80 WDG"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Sulfur
   ESP: Azufre
@@ -236,7 +236,7 @@ physHazards:
     flame. Do not smoke while applying this product.
   ESP: "El polvo de azufre suspendido en el aire se enciende f\xE1cilmente. Mant\xE9\
     ngalo alejado del calor, chispas o flama. No fume mientras aplique este producto. "
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/63848.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/63848
 picolSLNs:
 - slnLink: --
 picolSupplements:

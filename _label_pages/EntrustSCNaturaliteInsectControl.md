@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Entrust® SC Naturalite®   Insect Control"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Spinosad (a mixture of spinosyn A and spinosyn D)
   ESP: Spinosad (mezcla de spinosyn A y spinosyn D)
@@ -276,10 +276,10 @@ phi:
 physHazards:
   ENG: --
   ESP: --
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/57461.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/57461
 picolSLNs:
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/72223.pdf
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/57409.pdf
+- slnLink: https://picol.cahnrs.wsu.edu/label/72223
+- slnLink: https://picol.cahnrs.wsu.edu/label/57409
 picolSupplements:
 - suppLink: --
 ppeEquip:

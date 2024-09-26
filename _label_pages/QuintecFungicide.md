@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Quintec® Fungicide"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Quinoxyfen
   ESP: Quinoxyfen
@@ -221,9 +221,9 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/42897.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/42897
 picolSLNs:
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/67356.pdf
+- slnLink: https://picol.cahnrs.wsu.edu/label/67356
 picolSupplements:
 - suppLink: --
 ppeEquip:

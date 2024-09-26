@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Lorsban®-4E INSECTICIDE"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Chlorpyrifos
   ESP: "chlorpyrif\xF3s"
@@ -348,7 +348,7 @@ phi:
 physHazards:
   ENG: Combustible. Do not use or store near heat or open flame.
   ESP: 'Combustible. No use o almacene cerca del calor o flama abierta. '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/25013.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/25013
 picolSLNs:
 - slnLink: --
 picolSupplements:

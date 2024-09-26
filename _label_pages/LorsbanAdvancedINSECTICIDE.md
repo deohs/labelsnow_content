@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Lorsban® Advanced INSECTICIDE"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Chlorpyrifos
   ESP: "Clorpirif\xF3s"
@@ -356,18 +356,18 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/51677.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/51677
 picolSLNs:
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52230.pdf
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52423.pdf
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52359.pdf
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52244.pdf
-- slnLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52360.pdf
+- slnLink: https://picol.cahnrs.wsu.edu/label/52230
+- slnLink: https://picol.cahnrs.wsu.edu/label/52423
+- slnLink: https://picol.cahnrs.wsu.edu/label/52359
+- slnLink: https://picol.cahnrs.wsu.edu/label/52244
+- slnLink: https://picol.cahnrs.wsu.edu/label/52360
 picolSupplements:
 - suppLink: --
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52423.pdf
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52069.pdf
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52072.pdf
+- suppLink: https://picol.cahnrs.wsu.edu/label/52423
+- suppLink: https://picol.cahnrs.wsu.edu/label/52069
+- suppLink: https://picol.cahnrs.wsu.edu/label/52072
 ppeEquip:
   ENG: "Materials that are chemical resistant to this product are barrier laminate\
     \ and viton \u226514 mils. \n\nMixers and loaders using a mechanical transfer\

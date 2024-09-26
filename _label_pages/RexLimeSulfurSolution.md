@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Rex Lime Sulfur Solution"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Calcium Polysulfide
   ESP: Polisulfuro de calcio
@@ -293,7 +293,7 @@ physHazards:
   ESP: "No mezcle \u201CLime-Sulfur Solution\u201D con \xE1cidos o con fertilizantes\
     \ fosfatados. Se puede producir gas sulfuro de hidr\xF3geno, que es mortal y tiene\
     \ potencial de ser extremadamente inflamable. "
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/32702.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/32702
 picolSLNs:
 - slnLink: --
 picolSupplements:

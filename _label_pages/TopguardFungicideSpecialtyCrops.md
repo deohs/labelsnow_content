@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Topguard® Fungicide Specialty Crops"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Flutriafol
   ESP: Flutriafol
@@ -229,11 +229,11 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/64430.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/64430
 picolSLNs:
 - slnLink: --
 picolSupplements:
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/71249.pdf
+- suppLink: https://picol.cahnrs.wsu.edu/label/71249
 ppeEquip:
   ENG: "Applicators and all other handlers must wear: long-sleeve shirt and long pants,\
     \ chemical-resistant gloves, and shoes plus socks.\n\nFollow manufacturer's instructions\

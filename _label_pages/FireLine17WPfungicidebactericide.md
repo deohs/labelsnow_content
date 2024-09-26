@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "FireLine™ 17 WP fungicide/bactericide"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Oxytetracycline Hydrochloride
   ESP: Hidrocloruro de oxitetraciclina
@@ -213,7 +213,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/50316.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/50316
 picolSLNs:
 - slnLink: --
 picolSupplements:

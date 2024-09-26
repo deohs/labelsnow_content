@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Carbaryl 4L"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Carbaryl
   ESP: Carbaril
@@ -505,7 +505,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/14195.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/14195
 picolSLNs:
 - slnLink: --
 picolSupplements:

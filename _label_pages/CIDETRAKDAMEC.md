@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "CIDETRAK® DA MEC™"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: 2,4-Decadienoic Acid, Ethyl Ester, (E, Z)
   ESP: 2,4-Decadienoic Acid, Ethyl Ester, (E, Z)
@@ -192,7 +192,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/60391.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/60391
 picolSLNs:
 - slnLink: --
 picolSupplements:

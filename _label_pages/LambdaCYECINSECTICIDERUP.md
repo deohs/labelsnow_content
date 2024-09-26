@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Lambda-CY® EC INSECTICIDE - RUP"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Lambda-cyhalothrin
   ESP: Lambda-cyhalothrin
@@ -333,7 +333,7 @@ physHazards:
   ESP: "Combustible. No use o almacene cerca del calor o flama abierta. No utilice\
     \ este producto en o sobre equipo el\xE9ctrico debido a la posibilidad de riesgo\
     \ de descarga el\xE9ctrica. "
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/48720.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/48720
 picolSLNs:
 - slnLink: --
 picolSupplements:

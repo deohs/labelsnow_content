@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Success® NATURALYTE® INSECT CONTROL"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Spinosad
   ESP: Spinosad
@@ -201,11 +201,11 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/31028.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/31028
 picolSLNs:
 - slnLink: --
 picolSupplements:
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/54629.pdf
+- suppLink: https://picol.cahnrs.wsu.edu/label/54629
 ppeEquip:
   ENG: "Applicators and other handlers must wear:\n\u2022 Long-sleeved shirt and long\
     \ pants \n\u2022 Shoes plus socks \n\nFollow manufacturer's instructions for cleaning/\

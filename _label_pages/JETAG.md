@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "JET-AG®"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Hydrogen Peroxide
   ESP: "Per\xF3xido de hidr\xF3geno"
@@ -326,7 +326,7 @@ physHazards:
   ESP: 'Fuerte agente oxidante. No use en forma concentrada. Solo mezcle con agua
     de acuerdo a las instrucciones de la etiqueta. Nunca ponga en contacto el concentrado
     del producto con otros agentes oxidativos. '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/56516.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/56516
 picolSLNs:
 - slnLink: --
 picolSupplements:

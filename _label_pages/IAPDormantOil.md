@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "IAP® Dormant Oil"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Mineral oil
   ESP: Aceite mineral
@@ -230,7 +230,7 @@ physHazards:
   ESP: "No almacene, use o derrame cerca del calor o flama abierta. No suelde, caliente\
     \ o perfore este envase o recipiente. Los residuos se pueden incendiar de manera\
     \ explosiva si se calientan lo suficiente. \n"
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/66147.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/66147
 picolSLNs:
 - slnLink: --
 picolSupplements:

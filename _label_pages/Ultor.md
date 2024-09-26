@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Ultor®"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: 'Spirotetramat: cis-3-(2,5-dimethlyphenyl) -8-methoxy-2-oxo-1-azaspiro[4.5]dec-3-en-4-yl-ethyl
     carbonat'
@@ -334,7 +334,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/52293.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/52293
 picolSLNs:
 - slnLink: --
 picolSupplements:

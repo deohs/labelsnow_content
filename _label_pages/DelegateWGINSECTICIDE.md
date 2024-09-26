@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Delegate® WG INSECTICIDE"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Spinetoram (a mixture of  spinetoram-J and spinetoram-L)
   ESP: ''
@@ -319,12 +319,12 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/50164.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/50164
 picolSLNs:
 - slnLink: --
 picolSupplements:
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/67476.pdf
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/72112.pdf
+- suppLink: https://picol.cahnrs.wsu.edu/label/67476
+- suppLink: https://picol.cahnrs.wsu.edu/label/72112
 ppeEquip:
   ENG: "Applicators and other handlers must wear: \n\u2022 Long-sleeved shirt and\
     \ long pants \n\u2022 Shoes plus socks\n\nFollow manufacturer's instructions for\

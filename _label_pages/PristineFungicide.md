@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Pristine® Fungicide"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: pyraclostrobin
   ESP: pyraclostrobin
@@ -437,7 +437,7 @@ phi:
 physHazards:
   ENG: '---'
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/42183.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/42183
 picolSupplements:
 - suppLink: --
 ppeEquip:

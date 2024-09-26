@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Isomate®  CM Flex"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: (E, E)-8, Dodecadien-1-ol
   ESP: (E, E)-8, Dodecadien-1-ol
@@ -142,7 +142,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/53858.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/53858
 picolSLNs:
 - slnLink: --
 picolSupplements:

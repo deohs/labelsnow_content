@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Proclaim® Insecticide"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Emamectin benzoate
   ESP: Emamectin benzoate
@@ -278,11 +278,11 @@ phi:
 physHazards:
   ENG: 'Do not use, pour, spill or store near heat or open flame. '
   ESP: 'No use, vierta, derrame o almacene cerca del calor o flama abierta. '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/37304.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/37304
 picolSLNs:
 - slnLink: --
 picolSupplements:
-- suppLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/70625.pdf
+- suppLink: https://picol.cahnrs.wsu.edu/label/70625
 ppeEquip:
   ENG: "All applicators, including ground, airblast and aerial, and all mixers, loaders,\
     \ flaggers and other handlers must wear at a minimum the items listed below. See\

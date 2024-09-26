@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Agri Star™ BASIC COPPER 53 Basic Copper Sulfate"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Basic Copper Sulfate
   ESP: "Sulfato b\xE1sico de cobre"
@@ -307,7 +307,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/42776.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/42776
 picolSLNs:
 - slnLink: --
 picolSupplements:

@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "IAP™ HI SUPREME 440 SPRAY OIL-NW"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Mineral Oil
   ESP: Aceite mineral
@@ -221,7 +221,7 @@ physHazards:
   ESP: 'No almacene, use o derrame cerca del calor o flama abierta.  No suelde, caliente
     o perfore este envase o recipiente. Los residuos se pueden incendiar de manera
     explosiva si se calientan lo suficiente.  '
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/61808.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/61808
 picolSLNs:
 - slnLink: --
 picolSupplements:

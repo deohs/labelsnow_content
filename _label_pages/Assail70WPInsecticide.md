@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Assail® 70WP Insecticide"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: Acetamiprid (E)- N1 -[(6-chloro-3-pyridyl)methyl]-N2 -cyano-N1 -methyl acetamidine.
   ESP: Acetamiprid (E)- N1 -[(6-chloro-3-pyridyl)methyl]-N2 -cyano-N1 -methyl acetamidine.
@@ -315,7 +315,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/50663.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/50663
 picolSLNs:
 - slnLink: --
 picolSupplements:

@@ -1,7 +1,7 @@
 ---
 layout: label
 title: "Check Mate CM-F"
-modified: 2021-12-17 11:37:00
+modified: 2024-09-26 09:26:00
 activeIngredients:
 - ENG: (E,E) - Dodecadie-1-ol
   ESP: (E,E) - Dodecadie-1-ol
@@ -203,7 +203,7 @@ phi:
 physHazards:
   ENG: --
   ESP: ''
-picolLabelLink: http://cru66.cahe.wsu.edu/~picol/pdf/WA/69576.pdf
+picolLabelLink: https://picol.cahnrs.wsu.edu/label/69576
 picolSLNs:
 - slnLink: --
 picolSupplements:
